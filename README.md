@@ -37,7 +37,7 @@ Decidi dar um toque especial inspirado em **Star Wars**, criando um duelo entre 
 ---
 
 ## 🎮 Como jogar
-1. Acesse: (https://68c85bb108f88e8be7e3c667--jokenpo-jedi-vs-sith.netlify.app/).
+1. Acesse: (https://jokenpo-jedi-vs-sith.netlify.app/).
 2. Clique em **Iniciar** para começar (aprecie a trilha sonora 😏).  
 3. Escolha sua arma (Jedi, Sith ou Neutro).  
 4. O computador fará uma escolha aleatória.  
