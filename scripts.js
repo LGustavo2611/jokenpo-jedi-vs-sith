@@ -83,6 +83,11 @@ const neutralSound = new Audio("/assets/lightsaber3.mp3");
 const playerChoice = document.getElementById("player-choice");
 const computerChoice = document.getElementById("computer-choice");
 const resultDisplay = document.getElementById("result");
+const playerPoints = document.getElementById("player-points");
+const computerPoints = document.getElementById("computer-points");
+
+let playerScoreNumber = 0
+let computerScoreNumber = 0
 
 // Opções do jogo
 const choices = ["Jedi", "Sith", "Neutro"];
@@ -101,7 +106,7 @@ function playRound(playerSelection) {
   if (playerSelection === "Sith") sithSound.play();
   if (playerSelection === "Neutro") neutralSound.play();
 
-  // Determinar resultado
+  // Determinar resultado && Somar pontos
   let result = "";
   if (playerSelection === computerSelection) {
     result = "Empate!";
@@ -110,8 +115,12 @@ function playRound(playerSelection) {
     (playerSelection === "Sith" && computerSelection === "Neutro") ||
     (playerSelection === "Neutro" && computerSelection === "Jedi")
   ) {
+    playerScoreNumber++;
+    playerPoints.innerHTML = playerScoreNumber;
     result = "Você venceu! ✨";
   } else {
+    computerScoreNumber++;
+    computerPoints.innerHTML = computerScoreNumber;
     result = "Você perdeu... 🌑";
   }
 
