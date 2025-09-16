@@ -131,3 +131,11 @@ function playRound(playerSelection) {
 document.querySelector(".jedi").addEventListener("click", () => playRound("Jedi"));
 document.querySelector(".sith").addEventListener("click", () => playRound("Sith"));
 document.querySelector(".neutral").addEventListener("click", () => playRound("Neutro"));
+
+// Contador de visitas
+fetch("https://api.countapi.xyz/hit/jokenpo-jedi-vs-sith/visits")
+  .then(res => res.json())
+  .then(res => {
+    document.getElementById("visitor-counter").textContent =
+      `👀 Visitas: ${res.value}`;
+  });
